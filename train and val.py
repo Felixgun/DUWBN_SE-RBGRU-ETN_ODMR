@@ -40,76 +40,6 @@ from keras.utils import plot_model
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, classification_report
 from tqdm.auto import tqdm
 
-#=======================================================================
-
-# Load all data files and concatenate them into one DataFrame
-# all_files = glob.glob("dataset3/*.txt")
-# li = []
-
-# for filename in tqdm(all_files):
-#     # Preliminary check to decide the separator
-#     with open(filename, 'r') as temp_f:
-#         lines = temp_f.readlines()
-#         separator = "\t" if len(lines) > 31 else " "
-    
-#     # Read the file with the determined separator
-#     df = pd.read_csv(filename, index_col=None, header=None, sep=separator)
-    
-#     is_long_dataset = len(df) > 31
-    
-#     if is_long_dataset:
-#         # Modify the dataset for long sequences
-#         new_dfs = []
-#         for i in range(len(df) - 31):  # Adjust to 30 if it should include 31st as part of data
-#             temp_df = pd.DataFrame(df.iloc[i:i + 30, 2:].values, columns=[2, 3, 4, 5])  # Correct column labels for data
-#             label = df.iloc[i + 30, 0]  # The label is the first column of the 30th sequence row
-#             temp_df['gesture'] = label
-#             new_dfs.append(temp_df)
-#         df = pd.concat(new_dfs, axis=0, ignore_index=True)
-#         # print(df)
-#     else:
-#         gesture = filename.split("\\")[-1].split("_")[0]  # Use the filename as label
-#         df.rename(columns={0: 2, 1: 3, 2: 4, 3: 5}, inplace=True)  # Make sure columns align correctly
-#         df['gesture'] = gesture
-    
-#     li.append(df)
-
-# data = pd.concat(li, axis=0, ignore_index=True)
-# # Scale the values
-# # scaler = MinMaxScaler()
-# scaler= RobustScaler()
-# data.iloc[:, :4] = scaler.fit_transform(data.iloc[:, :4])
-
-# # Label encoding
-# encoder = LabelEncoder()
-# data.iloc[:, 4] = encoder.fit_transform(data.iloc[:, 4])
-
-# # Split features and labels
-# X = data.iloc[:, :4].values
-# y = data.iloc[:, 4].values
-
-# # One-hot encode labels
-# y = to_categorical(y)
-
-# # Create sequences for non-long datasets
-# def create_sequences(X, y, seq_length):
-#     Xs, ys = [], []
-#     for i in range(len(X) - seq_length - 1):
-#         Xs.append(X[i:(i + seq_length)])
-#         ys.append(y[i + seq_length])
-#     return np.array(Xs), np.array(ys)
-
-# seq_length = 30  # Length of sequence
-# X, y = create_sequences(X, y, seq_length) #if not is_long_dataset else (X, y)
-
-# # Split the data into training, validation, and testing
-# # X_train, X_temp, y_train, y_temp = train_test_split(X, y, test_size=0.3)
-# # X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.10)
-
-# X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.3)
-
-
-#=======================================================================
 
 # Load all data files and concatenate them into one DataFrame
 all_files = glob.glob("dataset3/*.txt")
@@ -160,16 +90,6 @@ y = data.iloc[:, 4].values
 # One-hot encode labels
 y = to_categorical(y)
 
-#=========================================
-
-# Create sequences for non-long datasets
-# def create_sequences(X, y, seq_length):
-#     Xs, ys = [], []
-#     for i in range(len(X) - seq_length - 1):
-#         Xs.append(X[i:(i + seq_length)])
-#         ys.append(y[i + seq_length])
-#     return np.array(Xs), np.array(ys)
-#=========================================
 
 # Create sequences for non-long datasets
 def create_sequences(X, y, seq_length):
