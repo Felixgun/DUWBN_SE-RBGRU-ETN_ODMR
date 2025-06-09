@@ -245,34 +245,6 @@ def change_rule(x,y):
         if AreaNumTrue != AreaNumRec[0]:
             AreaNumRec.insert(0,AreaNumTrue)
 
-
-# def reset_anchor(reset_index,AreaNumTrue):
-#     # time.sleep(1)
-#     print('reset anchor: ', reset_index[AreaNumTrue])
-#     client = mqtt.Client()
-#     client.connect(RASP_IP, 1883, 60) 
-
-#     p1,id1 = A2T(reset_index[AreaNumTrue][4])
-#     client.publish("dwm/node/{}/downlink/config".format(id1), json.dumps(p1))
-#     p1,id1 = A2T(reset_index[AreaNumTrue][5])
-#     client.publish("dwm/node/{}/downlink/config".format(id1), json.dumps(p1))
-#     p1,id1 = A2T(reset_index[AreaNumTrue][6])
-#     client.publish("dwm/node/{}/downlink/config".format(id1), json.dumps(p1))
-#     p1,id1 = A2T(reset_index[AreaNumTrue][7])
-#     client.publish("dwm/node/{}/downlink/config".format(id1), json.dumps(p1))
-#     p1,id1 = A2T(reset_index[AreaNumTrue][8])
-#     client.publish("dwm/node/{}/downlink/config".format(id1), json.dumps(p1))
-#     p1,id1 = A2T(reset_index[AreaNumTrue][9])
-#     client.publish("dwm/node/{}/downlink/config".format(id1), json.dumps(p1))
-    
-#     p1,id1 = T2A(reset_index[AreaNumTrue][0])
-#     client.publish("dwm/node/{}/downlink/config".format(id1), json.dumps(p1))
-#     p1,id1 = T2A(reset_index[AreaNumTrue][1])
-#     client.publish("dwm/node/{}/downlink/config".format(id1), json.dumps(p1))
-#     p1,id1 = T2A(reset_index[AreaNumTrue][2])
-#     client.publish("dwm/node/{}/downlink/config".format(id1), json.dumps(p1))
-#     p1,id1 = T2A(reset_index[AreaNumTrue][3])
-#     client.publish("dwm/node/{}/downlink/config".format(id1), json.dumps(p1))
     
 
 def reset_anchor(reset_index, AreaNumTrue, received_indices, requested_indices):
