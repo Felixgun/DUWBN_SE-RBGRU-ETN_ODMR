@@ -28,7 +28,7 @@ It leverages a deep learning model — **T-SE-Res-Bi-GRU** — trained to interp
 ---
 
 ## System Components
-![device](./images/photo.jpg | width=100)  
+![device](./images/photo.jpg){:height="50%" width="50%"}
 *Figure 1 — The T-SE-Res-Bi-GRU architecture*
 
 - **Wearable UWB Tag** — worn on the hand  
