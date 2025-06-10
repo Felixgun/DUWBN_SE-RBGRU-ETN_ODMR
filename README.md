@@ -66,7 +66,7 @@ A collection script (`inference_pc.py`) is included to help you record new sampl
 
 ## Example Output
 
-![Robot Output](./result.png)  
+![Robot Output](./images/result.png)  
 *Figure 2 — Mobile robot trajectory controlled via gesture recognition*
 
 The model enables smooth, real-time control with minimal latency. It performs well even when gestures are performed at varying speeds or orientations.
