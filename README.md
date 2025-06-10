@@ -28,9 +28,9 @@ It leverages a deep learning model — **T-SE-Res-Bi-GRU** — trained to interp
 ---
 
 ## System Components
-![device](./images/photo.jpg){:height="50%" width="50%"}
+![device](./images/photo.jpg)
 
-<img src="./images/photo.jpg" width="100" height="100">
+<img src="./images/photo.jpg" width="50%" height="50%">
 
 *Figure 1 — The T-SE-Res-Bi-GRU architecture*
 
