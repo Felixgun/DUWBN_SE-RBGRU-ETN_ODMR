@@ -28,7 +28,6 @@ It leverages a deep learning model — **T-SE-Res-Bi-GRU** — trained to interp
 ---
 
 ## System Components
-![device](./images/photo.jpg)
 
 <img src="./images/photo.jpg" width="50%" height="50%">
 
