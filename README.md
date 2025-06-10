@@ -1,5 +1,4 @@
 # T-SE-Res-Bi-GRU: Gesture Control for Mobile Robots  
-Transforming UWB signals into robot actions through deep sequential learning.
 
 ![Model Overview](./images/Tr-SE-Res-Bi-GRU_Diagram.png)  
 *Figure 1 — The T-SE-Res-Bi-GRU architecture*
@@ -17,13 +16,13 @@ It leverages a deep learning model — **T-SE-Res-Bi-GRU** — trained to interp
 
 ## Core Workflow
 ![Gsture Shape](./images/gestures.png)  
-*Figure 2 — The T-SE-Res-Bi-GRU architecture*
+*Figure 2 — Gestures shape*
 **From human gesture to mobile robot action:**
 
 1. A user wears a UWB tag on their hand.
 2. Fixed UWB anchors record signal responses as gestures are performed.
 3. The signal sequence is fed to the model
-4. The output is mapped to a robot command (e.g., forward, stop, turn).
+4. The output is mapped to a robot command (e.g., forward, backward, rotate clockwise, rotate counter-clockwise, change mode, rightward, leftward, ).
 
 ---
 
@@ -31,7 +30,7 @@ It leverages a deep learning model — **T-SE-Res-Bi-GRU** — trained to interp
 
 <img src="./images/photo.jpg" width="50%" height="50%">
 
-*Figure 1 — The T-SE-Res-Bi-GRU architecture*
+*Figure 3 — Mobile Robot*
 
 - **Wearable UWB Tag** — worn on the hand  
 - **Multiple UWB Anchors** — fixed around the environment  
@@ -68,7 +67,7 @@ A collection script (`inference_pc.py`) is included to help you record new sampl
 ## Example Output
 
 ![Robot Output](./images/result.png)  
-*Figure 2 — Mobile robot trajectory controlled via gesture recognition*
+*Figure 4 — Output visualization*
 
 The model enables smooth, real-time control with minimal latency. It performs well even when gestures are performed at varying speeds or orientations.
 
