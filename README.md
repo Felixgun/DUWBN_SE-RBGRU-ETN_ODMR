@@ -15,14 +15,16 @@ It leverages a deep learning model — **T-SE-Res-Bi-GRU** — trained to interp
 ---
 
 ## Core Workflow
-![Gsture Shape](./images/gestures.png)  
-*Figure 2 — Gestures shape*
+![Gsture Shape](./images/block_diagram.png)  
+*Figure 2 — System Diagram*
 **From human gesture to mobile robot action:**
 
 1. A user wears a UWB tag on their hand.
-2. Fixed UWB anchors record signal responses as gestures are performed.
+2. UWB tag position relayed through Raspberrypi gateway to Jetson AGX Xavier
 3. The signal sequence is fed to the model
 4. The output is mapped to a robot command (e.g., forward, backward, rotate clockwise, rotate counter-clockwise, change mode, rightward, leftward, ).
+5. Command sent to FPGA
+6. Mobile robot moves
 
 ---
 
@@ -34,9 +36,9 @@ It leverages a deep learning model — **T-SE-Res-Bi-GRU** — trained to interp
 
 - **Wearable UWB Tag** — worn on the hand  
 - **Multiple UWB Anchors** — fixed around the environment  
-- **Jetson NX or PC** — runs inference in real time  
-- **Mobile Robot** — receives commands based on predicted gestures  
-- **Pretrained T-SE-Res-Bi-GRU model** — the gesture recognizer
+- **Jetson AGX Xavier** — runs inference in real time  
+- **FPGA**  — Controls the mobile robot
+- **Mobile Robot** — Moves based on predicted gestures  
 
 ---
 
@@ -53,10 +55,11 @@ It leverages a deep learning model — **T-SE-Res-Bi-GRU** — trained to interp
 
 
 ## Dataset Info
-
+![Gsture Shape](./images/gestures.png)  
+*Figure 4 — Gestures shape*
 Collected using DUWB with labeled gestures, the dataset includes:
-- Time-series signals from 4+ UWB anchors
-- Labels for each gesture performed (e.g. "left", "right", "stop")
+- Time-series signals from 4 UWB anchors
+- Labels for each gesture performed ("m", "4", "6", "7", "8")
 
 **Want to build your own dataset?**  
 A collection script (`inference_pc.py`) is included to help you record new samples.
@@ -67,9 +70,9 @@ A collection script (`inference_pc.py`) is included to help you record new sampl
 ## Example Output
 
 ![Robot Output](./images/result.png)  
-*Figure 4 — Output visualization*
+*Figure 5 — Output visualization*
 
-The model enables smooth, real-time control with minimal latency. It performs well even when gestures are performed at varying speeds or orientations.
+The model enables smooth, real-time control with minimal misrecognition. It performs well even when gestures are performed at varying orientations and sub-regions.
 
 ---
 
