@@ -1,4 +1,4 @@
-# T-SE-Res-Bi-GRU: Gesture Control for Mobile Robots  
+# SE-RBGRU-ETN: Gesture Control for Omni-Directional Mobile Robots (ODMR)
 
 ![Model Overview](./images/Tr-SE-Res-Bi-GRU_Diagram.png)  
 *Figure 1 — The T-SE-Res-Bi-GRU architecture*
