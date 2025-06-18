@@ -1,7 +1,7 @@
 # SE-RBGRU-ETN: Gesture Control for Omni-Directional Mobile Robots (ODMR)
 
 ![Model Overview](./images/Tr-SE-Res-Bi-GRU_Diagram.png)  
-*Figure 1 — The T-SE-Res-Bi-GRU architecture*
+*Figure 1 — The SE-RBGRU-ETN architecture*
 
 ---
 
@@ -9,7 +9,7 @@
 
 This project enables **gesture-based control** of mobile robots using signal data from a **Distributed Ultra-Wideband (DUWB)** network.
 
-It leverages a deep learning model — **T-SE-Res-Bi-GRU** — trained to interpret UWB signal sequences as specific gesture commands. The system translates these into real-time movement instructions for a mobile robot.
+It leverages a deep learning model — **SE-RBGRU-ETN** — trained to interpret UWB signal sequences as specific gesture commands. The system translates these into real-time movement instructions for a mobile robot.
 
 
 ---
