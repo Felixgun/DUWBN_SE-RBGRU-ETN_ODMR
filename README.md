@@ -1,6 +1,6 @@
 # SE-RBGRU-ETN: Gesture Control for Omni-Directional Mobile robot (ODMR)
 
-![Model Overview](./images/Tr-SE-Res-Bi-GRU_Diagram.png)  
+![Model Overview](./images/Diagram.png)  
 *Figure 1 — The SE-RBGRU-ETN architecture*
 
 ---
